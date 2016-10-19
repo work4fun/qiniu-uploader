@@ -1,0 +1,31 @@
+{
+  "name": "qiniu-uploader",
+  "version": "0.1.0",
+  "description": "A command tool to upload files to qiniu",
+  "main": "lib",
+  "bin": {
+    "qiniu-upload": "bin/qiniu-upload.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Gerald <i@gerald.top>",
+  "license": "ISC",
+  "dependencies": {
+    "argparse": "^1.0.9",
+    "glob": "^7.1.1",
+    "qiniu": "^6.1.11"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gera2ld/qiniu-uploader.git"
+  },
+  "keywords": [
+    "qiniu"
+  ],
+  "bugs": {
+    "url": "https://github.com/gera2ld/qiniu-uploader/issues"
+  },
+  "homepage": "https://github.com/gera2ld/qiniu-uploader#readme"
+}
