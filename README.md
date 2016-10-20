@@ -46,6 +46,21 @@ Optional arguments:
 * `patterns` will be parsed by [node-glob](https://github.com/isaacs/node-glob).
 * `--bucket` and `AK`/`SK` are required if `--dry` is not assigned.
 
+Programmatic APIs
+---
+``` js
+const upload = require('qiniu-uploader');
+
+upload({
+  ak: 'ACCESS_KEY',
+  sk: 'SECRET_KEY',
+  bucket: 'my-bucket',
+  patterns: [
+    'dist/**',
+  ],
+});
+```
+
 Examples
 ---
 Assume we have a file system is like this:
@@ -59,10 +74,10 @@ Assume we have a file system is like this:
 
 Upload all files in `dist/`:
 ``` sh
-$ qiniu-upload --base dist --verbose 'dist/**'
+$ qiniu-upload --base dist --bucket my-bucket --verbose 'dist/**'
 ```
 
 Upload all `.js` and `.css` files in `dist/`:
 ``` sh
-$ qiniu-upload --base dist --verbose 'dist/**.@(js|css)'
+$ qiniu-upload --base dist --bucket my-bucket --verbose 'dist/**.@(js|css)'
 ```
