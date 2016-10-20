@@ -58,6 +58,9 @@ upload({
   patterns: [
     'dist/**',
   ],
+})
+.then(items => {
+  console.log('Uploaded items:', items);
 });
 ```
 
