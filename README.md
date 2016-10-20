@@ -49,11 +49,9 @@ Optional arguments:
 Programmatic APIs
 ---
 ``` js
-const upload = require('qiniu-uploader');
+const uploadAll = require('qiniu-uploader');
 
-upload({
-  ak: 'ACCESS_KEY',
-  sk: 'SECRET_KEY',
+uploadAll({
   bucket: 'my-bucket',
   patterns: [
     'dist/**',
@@ -61,6 +59,15 @@ upload({
 })
 .then(items => {
   console.log('Uploaded items:', items);
+});
+
+uploadAll.upload('my-bucket', {
+  type: 'raw',
+  key: 'key-to-file.txt',
+  data: 'hello, world',
+})
+.then(() => {
+  console.log('Uploaded raw text.');
 });
 ```
 
