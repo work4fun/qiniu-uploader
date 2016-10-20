@@ -1,6 +1,6 @@
 {
   "name": "qiniu-uploader",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "A command tool to upload files to qiniu",
   "main": "lib",
   "bin": {
