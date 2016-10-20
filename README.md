@@ -1,6 +1,10 @@
 qiniu-uploader
 ===
 
+![NPM](https://img.shields.io/npm/v/qiniu-uploader.svg)
+![License](https://img.shields.io/npm/l/qiniu-uploader.svg)
+![Downloads](https://img.shields.io/npm/dt/qiniu-uploader.svg)
+
 A command tool to upload files to qiniu
 
 Installation
