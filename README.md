@@ -69,6 +69,13 @@ uploadAll.upload('my-bucket', {
 .then(() => {
   console.log('Uploaded raw text.');
 });
+
+// get puttoken for further use
+const putToken = uploadAll.putToken('my-bucket', {
+  expires: 100,
+  saveKey: 'prefix/$(etag)',
+  returnBody: JSON.stringify({path: 'prefix/$(etag)'}),
+});
 ```
 
 Examples
