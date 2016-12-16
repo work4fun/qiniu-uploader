@@ -76,6 +76,12 @@ const putToken = uploadAll.putToken('my-bucket', {
   saveKey: 'prefix/$(etag)',
   returnBody: JSON.stringify({path: 'prefix/$(etag)'}),
 });
+
+// parse keys after booted
+uploadAll.parser.parseKeys({
+  ak: 'QINIU_ACCESS_KEY',
+  sk: 'QINIU_SECRET_KEY',
+});
 ```
 
 Examples
