@@ -1,17 +1,17 @@
 qiniu-uploader
 ===
 
-![NPM](https://img.shields.io/npm/v/qiniu-uploader.svg)
-![License](https://img.shields.io/npm/l/qiniu-uploader.svg)
-![Downloads](https://img.shields.io/npm/dt/qiniu-uploader.svg)
+![NPM](https://img.shields.io/npm/v/qiniu2uploader.svg)
+![License](https://img.shields.io/npm/l/qiniu2uploader.svg)
+![Downloads](https://img.shields.io/npm/dt/qiniu2uploader.svg)
 
-A command tool to upload files to qiniu
+A command tool to upload files to qiniu, Resume upload Support
 
 Installation
 ---
 
 ```sh
-$ npm i qiniu-uploader -g
+$ npm i qiniu2uploader -g
 ```
 
 Usage
@@ -63,10 +63,10 @@ Assume we have a file system is like this:
 
 Upload all files in `dist/`:
 ``` sh
-$ qiniu-upload --base dist --bucket my-bucket --verbose 'dist/**'
+$ qiniu-upload --base -r true dist --bucket my-bucket --verbose 'dist/**'
 ```
 
 Upload all `.js` and `.css` files in `dist/`:
 ``` sh
-$ qiniu-upload --base dist --bucket my-bucket --verbose 'dist/**.@(js|css)'
+$ qiniu-upload --base -r true dist --bucket my-bucket --verbose 'dist/**.@(js|css)'
 ```
