@@ -1,6 +1,6 @@
 {
   "name": "qiniu2uploader",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A command tool to upload files to qiniu, resume upload support",
   "main": "lib",
   "bin": {
