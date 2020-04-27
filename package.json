@@ -14,7 +14,8 @@
   "dependencies": {
     "argparse": "^1.0.9",
     "glob": "^7.1.1",
-    "qiniu": "^6.1.11"
+    "progress-stream": "^2.0.0",
+    "qiniu": "^7.3"
   },
   "devDependencies": {},
   "repository": {
