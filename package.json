@@ -20,13 +20,13 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gera2ld/qiniu-uploader.git"
+    "url": "git+https://github.com/work4fun/qiniu-uploader.git"
   },
   "keywords": [
     "qiniu"
   ],
   "bugs": {
-    "url": "https://github.com/gera2ld/qiniu-uploader/issues"
+    "url": "https://github.com/work4fun/qiniu-uploader/issues"
   },
-  "homepage": "https://github.com/gera2ld/qiniu-uploader#readme"
+  "homepage": "https://github.com/work4fun/qiniu-uploader#readme"
 }
