@@ -18,7 +18,7 @@ Usage
 ---
 
 ```
-usage: qiniu-upload [-h] [-v] [-n] [-b BUCKET] [--base BASE] [-p PREFIX]
+usage: qiniu-upload [-h] [-v] [-es] [-r] [-n] [-b BUCKET] [--base BASE] [-p PREFIX]
                     [--verbose] [--ak AK] [--sk SK]
                     patterns [patterns ...]
 
@@ -33,6 +33,10 @@ Optional arguments:
   -n, --dry             List the files to be uploaded and exit
   -b BUCKET, --bucket BUCKET
                         Set qiniu bucket
+  -es seconds, --expires seconds         
+                        Set put token expires        
+  -r true, --resume true 
+                        Enable resume upload mode        
   --base BASE           Set base path, default as current working directory
   -p PREFIX, --prefix PREFIX
                         Set prefix for the remote link
@@ -45,44 +49,6 @@ Optional arguments:
 
 * `patterns` will be parsed by [node-glob](https://github.com/isaacs/node-glob).
 * `--bucket` and `AK`/`SK` are required if `--dry` is not assigned.
-
-Programmatic APIs
----
-``` js
-const uploadAll = require('qiniu-uploader');
-
-uploadAll({
-  bucket: 'my-bucket',
-  patterns: [
-    'dist/**',
-  ],
-})
-.then(items => {
-  console.log('Uploaded items:', items);
-});
-
-uploadAll.upload('my-bucket', {
-  type: 'raw',
-  key: 'key-to-file.txt',
-  data: 'hello, world',
-})
-.then(() => {
-  console.log('Uploaded raw text.');
-});
-
-// get puttoken for further use
-const putToken = uploadAll.putToken('my-bucket', {
-  expires: 100,
-  saveKey: 'prefix/$(etag)',
-  returnBody: JSON.stringify({path: 'prefix/$(etag)'}),
-});
-
-// parse keys after booted
-uploadAll.parser.parseKeys({
-  ak: 'QINIU_ACCESS_KEY',
-  sk: 'QINIU_SECRET_KEY',
-});
-```
 
 Examples
 ---
