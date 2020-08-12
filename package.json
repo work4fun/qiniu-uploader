@@ -15,7 +15,7 @@
     "argparse": "^1.0.9",
     "glob": "^7.1.1",
     "progress-stream": "^2.0.0",
-    "qiniu": "git://git@github.com:HongjiangHuang/nodejs-sdk.git"
+    "qiniu": "git+https://github.com/HongjiangHuang/nodejs-sdk.git#master"
   },
   "devDependencies": {},
   "repository": {
